@@ -1,0 +1,23 @@
+services:
+  web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    image: uro-web:local
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+
+  # python:
+  #   build:
+  #     context: ./python
+  #     dockerfile: Dockerfile
+  #   image: uro-python:local
+  #   devices:
+  #     - "/dev/video0:/dev/video0"
+  #   environment:
+  #     - DISPLAY=${DISPLAY:-:0}
+  #     - QT_X11_NO_MITSHM=1
+  #   volumes:
+  #     - "/tmp/.X11-unix:/tmp/.X11-unix:rw"
+  #   restart: unless-stopped
