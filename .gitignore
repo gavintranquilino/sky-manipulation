@@ -1,3 +1,6 @@
+# Environment
+cloudflared_token.sh
+
 # Python
 .venv/
 __pycache__/
